@@ -1,0 +1,51 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills Elevation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section id="setup">
+      <h1>Skills Elevation</h1>
+      <label>
+        <span>Player name</span>
+        <input id="playerName" type="text" placeholder="Your name" />
+      </label>
+      <label>
+        <span>Select level</span>
+        <div id="levelButtons"></div>
+      </label>
+      <button id="startBtn">Start</button>
+    </section>
+    <section id="quiz" class="hidden">
+      <div class="hud">
+        <div><strong>Level:</strong> <span id="hudLevel"></span></div>
+        <div><strong>Question:</strong> <span id="hudIndex"></span>/<span id="hudTotal"></span></div>
+        <div><strong>Score:</strong> <span id="hudScore">0</span></div>
+        <div><strong>Timer:</strong> <span id="hudTimer">—</span></div>
+      </div>
+      <div id="prompt"></div>
+      <ul id="options" class="options"></ul>
+      <button id="nextBtn" class="hidden">Next</button>
+    </section>
+
+    <section id="result" class="hidden">
+      <h2>Results</h2>
+      <p><strong>Score:</strong> <span id="finalScore"></span></p>
+      <p><strong>Accuracy:</strong> <span id="finalAccuracy"></span></p>
+      <div id="detailList"></div>
+      <button id="restartBtn">Play again</button>
+    </section>
+    <section id="board">
+      <h2>Leaderboard</h2>
+      <ol id="leaderboard"></ol>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
